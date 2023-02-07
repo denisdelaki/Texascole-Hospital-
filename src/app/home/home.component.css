@@ -179,7 +179,7 @@
   }
   .doctors-list {
     display: flex;
-    flex-wrap: wrap;
+    
   }
   
   .doctor-card {
