@@ -2,8 +2,8 @@
 <div class="header">
     <h1 class="header__title">Texascole Hospital</h1>
     <nav class="header__nav">
-      <a [routerLink]="['/home/signin']">Sign In</a>
-      <a [routerLink]="['/home/signup']">Sign Up</a>
+        <a (click)="onSignin()">Signin</a>
+        <a (click)="onSignin()">SignUp</a>
     </nav>
   </div>
   
@@ -14,13 +14,13 @@
       <!-- image slider component -->
       <div class="slider">
         <div class="slide">
-          <img src="https://plus.unsplash.com/premium_photo-1668087717008-bc6c6005c3ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZG9jdG9yc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60">
+          <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80">
         </div>
         <div class="slide">
-          <img src="https://media.istockphoto.com/id/513438487/photo/doctors-and-nurses-smiling-in-hospital-hallway.jpg?b=1&s=170667a&w=0&k=20&c=jsO4pM2BRMv0nLcz-_p_fu82KHWyMtaPds8csig64Xw=">
+          <img src="https://images.unsplash.com/photo-1584516150909-c43483ee7932?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1424&q=80">
         </div>
         <div class="slide">
-          <img src="https://images.unsplash.com/photo-1638202993928-7267aad84c31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGRvY3RvcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+          <img src="https://media.istockphoto.com/id/495828773/photo/portrait-of-confident-doctors.jpg?b=1&s=170667a&w=0&k=20&c=D2zfoRsc7-lX9HTU5oCZZJSLAOZrAl3mFhj-FbiwhnY=">
         </div>
       </div>
       
@@ -41,7 +41,25 @@
   <div class="doctors">
     <h3 class="doctors__title">Meet Our Doctors</h3>
     <div class="doctors__list">
-      <!-- Your doctors component -->
+      <!-- Doctor's List -->
+<div class="doctors-list">
+    <div class="doctor-card">
+      <img src="https://media.istockphoto.com/id/1455609920/photo/senior-black-male-doctor-holding-a-tablet-at-the-window-in-a-hospital.jpg?b=1&s=170667a&w=0&k=20&c=fxe3l8vIxbh-uCp_OJj0g0YjkgkYU8HzGOVbxajnwYU=" alt="Doctor's Image">
+      <h3 class="doctor-name">Dr. John Doe</h3>
+      <p class="specialization">Cardiology</p>
+    </div>
+    <div class="doctor-card">
+      <img src="https://media.istockphoto.com/id/1394002689/photo/nurse-working-at-the-reception-desk-in-the-private-clinic.jpg?b=1&s=170667a&w=0&k=20&c=JeomyFbnGsk9QZ0c2Xa_wXiarj8njkTiHov5bEJC5-Q=" alt="Doctor's Image">
+      <h3 class="doctor-name">Dr. Jane Doe</h3>
+      <p class="specialization">Pediatrics</p>
+    </div>
+    <div class="doctor-card">
+      <img src="https://images.unsplash.com/photo-1550831107-1553da8c8464?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGRvY3RvcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="Doctor's Image">
+      <h3 class="doctor-name">Dr. Bob Smith</h3>
+      <p class="specialization">Surgery</p>
+    </div>
+  </div>
+  
     </div>
   </div>
   <div class="footer">

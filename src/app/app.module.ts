@@ -10,7 +10,6 @@ import { PatientComponent } from './patient/patient.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { HomeComponent } from './home/home.component';
-
 const routes: Routes = [
   
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -28,6 +27,7 @@ const routes: Routes = [
     { path: 'doctor', component: DoctorComponent },
     { path: 'patient', component: PatientComponent },
     { path: 'reception', component: ReceptionComponent }, 
+    { path: 'booking', component: ReceptionComponent }, 
   ]}
 ];
 @NgModule({
@@ -45,7 +45,7 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+ 
   bootstrap: [AppComponent]
 })
 export class AppModule { }
