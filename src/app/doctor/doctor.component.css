@@ -37,3 +37,13 @@
     padding: 10px;
     text-align: left;
   }
+  button {
+    background-color: #0097a7;
+    color: white;
+    border: none;
+    padding: 0.5rem 0.3rem;
+    cursor: pointer;
+  }
+  button:hover{
+    background-color: #04a0c7;
+  }
