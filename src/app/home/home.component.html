@@ -1,0 +1,43 @@
+<!-- home.component.html -->
+<div class="header">
+    <h1 class="header__title">Texascole Hospital</h1>
+    <nav class="header__nav">
+      <a [routerLink]="['/home/signin']">Sign In</a>
+      <a [routerLink]="['/home/signup']">Sign Up</a>
+    </nav>
+  </div>
+  
+  <div class="hero">
+    <h2 class="hero__title">Welcome to Texascole Hospital</h2>
+    <p class="hero__subtitle">Where Your Health Comes First</p>
+    <div class="hero__image-slider">
+      <!-- Your image slider component -->
+    </div>
+  </div>
+  
+  <div class="services">
+    <h3 class="services__title">Our Services</h3>
+    <ul class="services__list">
+      <li class="services__item">Emergency Care</li>
+      <li class="services__item">Primary Care</li>
+      <li class="services__item">Surgery</li>
+      <li class="services__item">Rehabilitation</li>
+      <li class="services__item">Diagnostic Services</li>
+    </ul>
+  </div>
+  
+  <div class="doctors">
+    <h3 class="doctors__title">Meet Our Doctors</h3>
+    <div class="doctors__list">
+      <!-- Your doctors component -->
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer__copyright">&copy; Texascole 2023</div>
+    <nav class="footer__links">
+      <a href="#">Contact</a>
+      <a href="#">About</a>
+    </nav>
+  </div>
+  <router-outlet></router-outlet>
+  
