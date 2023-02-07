@@ -1,1 +1,52 @@
-<p>doctor works!</p>
+<div class="doctor-page">
+    <h1>Welcome, {{ doctorName }}</h1>
+    <h2>Doctor Information</h2>
+    <form>
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" [(ngModel)]="doctorName">
+      </div>
+      <div>
+        <label for="specialisation">Specialisation:</label>
+        <input type="text" id="specialisation" [(ngModel)]="specialization">
+      </div>
+      <button (click)="updateDoctorInfo()">Update Information</button>
+    </form>
+  
+    <h2>Appointment Schedule</h2>
+    <table>
+      <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Patient</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let appointment of appointments">
+        <td>{{ appointment.date }}</td>
+        <td>{{ appointment.time }}</td>
+        <td>{{ appointment.patientName }}</td>
+        <td>
+          <button (click)="rescheduleAppointment(appointment)">Reschedule</button>
+        </td>
+      </tr>
+    </table>
+  
+    <h2>Patient Information</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Medical History</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let patient of patients">
+        <td>{{ patient.name }}</td>
+        <td>{{ patient.dob }}</td>
+        <td>{{ patient.history }}</td>
+        <td>
+          <button (click)="viewPatientHistory(patient)">View History</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  
