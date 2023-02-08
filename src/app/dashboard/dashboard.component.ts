@@ -10,4 +10,9 @@ export class DashboardComponent {
   onSignOut() {
     this.router.navigate(['/']);
   }
+  isMinimized = false;
+
+  onMinimizeSidebar() {
+    this.isMinimized = !this.isMinimized;
+  }
 }

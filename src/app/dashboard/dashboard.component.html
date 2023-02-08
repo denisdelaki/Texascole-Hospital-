@@ -1,21 +1,23 @@
 <!-- dashboard.component.html -->
 <div class="dashboard">
-    <div class="sidebar">
-      <div class="sidebar__header">
-        <h3>Texascole</h3>
-        <p>Where your Health matters</p>
-      </div>
-      <div class="sidebar__nav">
-        <a routerLink="/dashboard/doctor" routerLinkActive="active">Doctors</a>
-        <a routerLink="/dashboard/patient" routerLinkActive="active">Patients</a>
-        <a routerLink="/dashboard/reception" routerLinkActive="active">Receptions</a>
-        <a routerLink="/dashboard/bookings" routerLinkActive="active">Bookings</a>
-        
-      </div>
-      <a (click)="onSignOut()">SignOut</a>
+  <div class="sidebar" [ngClass]="{'sidebar--minimized': isMinimized}">
+    <div class="sidebar__header">
+      <h3>Texascole</h3>
+      <p>Where your Health matters</p>
+      <button (click)="isMinimized = !isMinimized">
+        <i class="fa fa-bars">toggle</i>
+      </button>
     </div>
-    <div class="main-content">
-      <router-outlet></router-outlet>
+    <div class="sidebar__nav">
+      <a routerLink="/dashboard/doctor" routerLinkActive="active">Doctors</a>
+      <a routerLink="/dashboard/patient" routerLinkActive="active">Patients</a>
+      <a routerLink="/dashboard/reception" routerLinkActive="active">Receptions</a>
+      <a routerLink="/dashboard/bookings" routerLinkActive="active">Bookings</a>
+      
     </div>
+    <a (click)="onSignOut()">SignOut</a>
   </div>
-  
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
